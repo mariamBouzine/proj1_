@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- *******Nav bar******* -->
+    <nav class="nav"  id="myTopnav">
+        <a href="#"><img src="img/Logo.png" alt="Logo " class="logo active"/></a>
+        <div class="links">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <ul>
+                <li><a>Stories</a></li>
+                <li><a>Impact</a></li>
+                <li><a>Company</a></li>
+                <li><a>Newsroom</a></li>
+            </ul>
+        </div>
+        <a href="#"><img src="img/icon_search.png" alt="icon_search" class="icon_search"/></a>
+    </nav>
+    <div class="line-1"></div> 
+    
+    <!-- *******header******* -->
+    <header class="header">   
+        <img src="img/img2_header.png" class="img imgtop" />
+        <div class="box_left">
+            <p>BRING INSPIRATION
+                AND IN<span class="text_color_half">NOVATION</span>
+                TO EVE<span class="text_color1">RY ATHLETE</span>
+                IN THE <span class="text_color1">WORLD<span></p>
+                <img src="img/video.png" class="video"/>
+        </div>
+        <div class="box_right">
+            <img src="img/img1_header.png" class="img imgbuttom"/> 
+        </div>
+    </header>
+    <!-- ******* section 1******* -->
+    <section class="about">
+        <div class="box_about_left">
+            <p>We champion continual progress for athletes and sport by taking action to help 
+               athletes reach their potential. Every job at ELMOURE, Inc. is grounded in a 
+               team-first mindset, cultivating a culture of innovation and a shared purpose 
+               to leave an enduring impact.</p>
+            <button><h3>Learn more</h3><img src="img/img2_section.png"/></button>
+        </div>
+        <img src="img/img1_section.png" alt=""/>
+    </section>
+    <section class="about about_right">
+        <img src="img/img1_section.png" alt=""/>
+        <div class="box_about_right">
+            <button><h3>Learn more</h3><img src="img/img3_section.png"/></button>
+            <div class="slide_content slide_display_container">
+                <img class="mySlides" src="img/img1_slider.png"/>1
+                <img class="mySlides"src="img/img1_slider.png"/>2
+                <img class="mySlides" src="img/img1_slider.png"/>3
+                <div class="slide_center slide_container slide_section slide_large slide_text-white slide_display_bottommiddle">
+                    <div class="btnslide_left slide_hover-text" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="btnslide_right slide_hover_text" onclick="plusDivs(1)">&#10095;</div>
+                    <div class="btnslide_buttom">
+                        <span class="slide_badge demo slide_border slide-transparent slide-hover-white" onclick="currentDiv(1)">.</span>
+                    <span class="slide_badge demo slide_border slide-transparent slide-hover-white" onclick="currentDiv(2)">.</span>
+                    <span class="slide_badge demo slide_border slide-transparent slide-hover-white" onclick="currentDiv(3)">.</span>
+                    </div>
+                    
+                </div>
+            </div> 
+            <p>*If you have a body, 
+                you are an athlete</p>
+            
+        </div>    
+    </section>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        } 
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        } 
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) 
+          {
+            slideIndex = 1
+          }
+          if (n < 1) {
+            slideIndex = x.length
+          }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" slide_white", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " slide_white";
+        }
+    </script>
+    <div class="line-2 line_m"></div> 
+    <!-- ********* gallery ********** -->
+    <section class="Gallery_">
+        <div class="box_gallery">
+            <div class="gallery">
+                <img src="img/img1_gallery.png" alt="Mountains" width="600" height="400">
+                <div class="desc">Introducing Elmoure's 2022 Women’s National Team Collections</div>
+            </div>
+            <div class="gallery">
+                <img src="img/img2_gallery.png" alt="Mountains" width="600" height="400">
+                <div class="desc">Elmoure is Working with Communities to Increase Climate Resilience</div>
+            </div>
+        </div>
+        <div class="box_gallery">
+            <div class="gallery">
+                <img src="img/img3_gallery.png" alt="Mountains" width="600" height="400">
+                <div class="desc">Introducing Elmoure's 2022 Women’s National Team Collections</div>
+            </div>
+            <div class="gallery">
+                <img src="img/img4_gallery.png" alt="Mountains" width="600" height="400">
+                <div class="desc">Elmoure is Working with Communities to Increase Climate Resilience</div>
+            </div>
+        </div>
+        <div class="align-right">
+            <button><p>show more</p><img src="img/icon_button_gallery.png"/></button>
+        </div>
+    </section>
+    <div class="line-2"></div> 
+    <!-- ********* contact us ********** -->
+    <div class="container">
+        <h1>contact us</h1>
+        <div class="line-3"></div> 
+        <div class="contact">
+            <div class="contact_left">
+                <h3>
+                    what we can help you ?
+                </h3>
+            </div>
+            <form class="contact_right">
+                <input type="text" id="Name" name="Name" placeholder="Name">
+                <input type="text" id="Email" name="Email" placeholder="Email">
+                <textarea id="Message" name="Message" placeholder="Message" style="height:200px"></textarea>
+                <button>send <img src="img/send.png"/></button>
+            </form>
+        </div>
+    </div>
+    <!-- ********footer******** -->
+    <footer>
+        <div class="row primary">
+            <div class="column about_footer">
+                <img src="img/logo1.png" class="logo_footer" alt="" />
+             
+                <div class="social">
+                    <img src="img/fb.png"/>
+                    <img src="img/in.png"/>
+                    <img src="img/twit.png"/>
+                    <img src="img/insta.png"/>                    
+                </div>
+            </div>
+            
+            <div class="column links">
+              <h3>GET HELP</h3>
+                <ul>
+                    <li>
+                    <a href="#os">Order Status</a>
+                    </li>
+                    <li>
+                    <a href="#sd">Shipping and Delivery</a>
+                    </li>
+                    <li>
+                    <a href="#po">Payment Options</a>
+                    </li>
+                    <li>
+                    <a href="#gcb">Gift Card Balance</a>
+                    </li>
+                    <li>
+                        <a href="#cu">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column links column2">
+                <h3>GET HELP</h3>
+                  <ul>
+                      <li>
+                      <a href="#faq">Order Status</a>
+                      </li>
+                      <li>
+                      <a href="#cookies-policy">Shipping and Delivery</a>
+                      </li>
+                      <li>
+                      <a href="#terms-of-services">Payment Options</a>
+                      </li>
+                      <li>
+                      <a href="#support">Gift Card Balance</a>
+                      </li>
+                      <li>
+                          <a href="#support">Contact Us</a>
+                      </li>
+                  </ul>
+              </div>  
+          </div>
+    </footer>
+</body>
+</html>
